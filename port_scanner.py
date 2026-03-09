@@ -4,12 +4,15 @@ target = input("Enter target IP: ")
 
 print("Scanning target:", target)
 
-for port in range(1, 1025):
+for port in range(1,200):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(0.5)
+    s.settimeout(0.1)
 
     result = s.connect_ex((target, port))
+
     if result == 0:
-        print("Port", port, "is open")
+        print(f"Port {port} is OPEN")
 
     s.close()
+
+print("Scan finished")
