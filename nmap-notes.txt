@@ -1,5 +1,4 @@
 Nmap Commands
-
 nmap -sV target-ip
 nmap -A target-ip
 nmap -p- target-ip
